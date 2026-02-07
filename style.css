@@ -8,19 +8,20 @@ body {
     background-image: var(--bg-img);
     background-repeat: no-repeat;
     background-color: #096acc;
+    background-position: bottom -345px left -100px;
     justify-content: space-between;
 }
 .logo {
-    padding: 10px 15px 10px 10px;
+    width: 100vw;
+    padding: 10px 10px 10px 10px;
     display: flex;
     background-color: rgba(0, 148, 37, 0.7);
     color: white;
-    font-size: clamp(1.5rem, 3.5vw, 40px);
+    font-size: clamp(1.5rem, 3vw, 50px);
     align-items: center;
 }
 .logo>img {
-    width: clamp(50px, 7vw, 100px);
-    margin-right: 10px;
+    width: clamp(45px, 6vw, 100px);
 }
 @media (min-width: 768px) {
     body {
@@ -33,17 +34,23 @@ body {
         height: 215px;
         width: 35%;
     }
+    .logo {
+        width: 100%;
+    }
+    .logo>img {
+         margin-right: calc(5px + 1vw);
+    }
 }
 main {
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 70vh;
-    margin-top: 8%;
-    border-radius: 16px;
+    margin-top: 6%;
+    border-radius: 32px;
     /* background-color: rgba(13, 206, 196, 0.5); */
     background: #9DE8F5;
     background: linear-gradient(170deg, rgba(157, 232, 245, 0.68) 15%, rgba(255, 255, 255, 0.08) 28%, rgba(223, 247, 252, 0.29) 50%, rgba(157, 232, 245, 0.6) 61%, rgba(9, 106, 204, 0.96) 87%, rgba(9, 106, 204, 0.3) 100%);
@@ -55,11 +62,26 @@ main {
     }
 }
 .content {
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
     height: 98%;
     width: 96%;
     background-color: rgba(255, 255, 255);
     border-radius: 64px;
+}
+aside.right {
+    width: 0%;
+    left: 100%;
+}
+
+@media (min-width: 768px) {
+    aside.right {
+        width: 15%;
+        background-image: var(--bg-img);
+        background-position: right -360px bottom;
+        background-repeat: no-repeat;
+    }
 }
 form {
     display: flex;
@@ -72,16 +94,3 @@ input {
     width: 200px;
 }
 
-aside.right {
-    width: 0%;
-    left: 100%;
-}
-
-@media (min-width: 768px) {
-    aside.right {
-        width: 15%;
-        background-image: var(--bg-img);
-        background-position: right -200px bottom;
-        background-repeat: no-repeat;
-    }
-}
