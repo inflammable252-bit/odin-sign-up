@@ -1,7 +1,6 @@
 :root {
-    --bg-img: url("windowsxpbeach.png");
+    --green: 0, 148, 37;
 }
-
 @font-face {
     font-family: 'Nunito';
     src: url('fonts/Nunito-ExtraLight.woff2') format('woff2'),
@@ -23,10 +22,10 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: var(--bg-img);
-    background-repeat: no-repeat;
+    background-image: url("windowsxpbeach.png");
+    background-repeat: repeat-x;
     background-color: #096acc;
-    background-position: bottom -345px left -100px;
+    background-position: center;
     justify-content: space-between;
     font-family: "Nunito";
     font-weight: 800;
@@ -36,7 +35,7 @@ body {
     width: 100vw;
     padding: 10px calc(1px + 5vw) 10px calc(1px + 1vw);
     display: flex;
-    background-color: rgba(0, 148, 37, 0.7);
+    background-color: rgba(var(--green), 0.8);
     font-size: clamp(calc(1.5rem - 1vw), 3vw, 45px);
     align-items: center;
     font-family: "Pridi";
@@ -49,19 +48,21 @@ body {
 @media (min-width: 768px) {
     body {
         flex-direction: row;
-        background-position: bottom left;
+        background-position: bottom left -10px;
+        background-size: 80vh auto;
     }
     aside.left {
         position: relative;
-        top: 180px;
+        top: 15vh;
         height: 215px;
         width: 23vw;
     }
     .logo {
         width: 100%;
+        background-color: rgba(var(--green), 0.7);
     }
-    .logo>img {
-         margin-right: 1vw;
+    .logo, .logo>img {
+        margin: 0 auto;
     }
 }
 main {
@@ -75,7 +76,6 @@ main {
     height: 70vh;
     margin-top: 6%;
     border-radius: 32px;
-    /* background-color: rgba(13, 206, 196, 0.5); */
     background: #9DE8F5;
     background: linear-gradient(170deg, rgba(157, 232, 245, 0.68) 15%, rgba(255, 255, 255, 0.08) 28%, rgba(223, 247, 252, 0.29) 50%, rgba(157, 232, 245, 0.6) 61%, rgba(9, 106, 204, 0.96) 87%, rgba(9, 106, 204, 0.3) 100%);
 }
@@ -86,13 +86,13 @@ main {
     }
 }
 .content {
-    --background-color: #096acc1c;
+    --background-color: hsla(135, 100%, 29%, 0.326);
     display: flex;
     flex-direction: column;
     padding: 4vh 0 3vh;
     height: 98%;
     width: 96%;
-    background-color: rgba(255, 255, 255);
+    background-color: hsl(53, 96%, 96%);
     border-radius: 32px;
     margin: 2.5vh 1vw;
     overflow: auto;
@@ -105,9 +105,6 @@ aside.right {
 @media (min-width: 768px) {
     aside.right {
         width: calc(10vw - 3rem);
-        background-image: var(--bg-img);
-        background-position: right -360px bottom;
-        background-repeat: no-repeat;
     }
 }
 form {
@@ -118,19 +115,24 @@ form {
 .tableTop {
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
-    height: fit-content;
-    /* margin: 3vh 0; */
-    /* padding: 1.5rem 0; */
+    height: auto;
+    padding: 1vh 8vw 3vh;
+    p {
+        font-size: 1.3rem;
+        line-height: calc(1rem + 3.5vh);
+    }
     p, h2 {
-        margin: 2.5vh 5vw 2.5vh 5vw;
+        margin-top: 1.5vh;
+        color: rgb(92, 54, 5);
     }
 }
 
 .tableInputWrapper {
+    background-color: var(--background-color);
+    box-shadow: 0 8px 6px -6px #80808078;
     display: flex;
     flex-direction: column;
-    padding: 10vw 10vh;
+    padding: 5vh 5vw 8vh;
     row-gap: 3vh;
     label {
         margin-bottom: 0.1rem;
@@ -157,7 +159,15 @@ form {
     justify-content: center;
     align-items: center;
     row-gap: 1vh;
-    background-color:var(--background-color);
+}
+
+.tableFooter>input {
+    background-color: rgb(var(--green));
+    color: white;
+    border-style: none;
+    border-radius: 2vw;
+    padding: 8px 24px;
+    font-size: 1.1rem;
 }
 
 
