@@ -32,18 +32,18 @@ body {
     font-weight: 800;
 }
 .logo {
+    color: white;
     width: 100vw;
-    padding: 10px 10px 10px calc(1px + 1vw);
+    padding: 10px calc(1px + 5vw) 10px calc(1px + 1vw);
     display: flex;
     background-color: rgba(0, 148, 37, 0.7);
-    color: white;
-    font-size: clamp(calc(1.5rem - 1vw), 3vw, 50px);
+    font-size: clamp(calc(1.5rem - 1vw), 3vw, 45px);
     align-items: center;
     font-family: "Pridi";
     letter-spacing: 2px;
 }
 .logo>img {
-    width: clamp(50px, 6vw, 100px);
+    width: clamp(40px, 4.7vw, 100px);
     margin-right: 10px;
 }
 @media (min-width: 768px) {
@@ -89,12 +89,13 @@ main {
     --background-color: #096acc1c;
     display: flex;
     flex-direction: column;
-    padding: 3vh 0 3vh;
+    padding: 4vh 0 3vh;
     height: 98%;
     width: 96%;
     background-color: rgba(255, 255, 255);
     border-radius: 32px;
     margin: 2.5vh 1vw;
+    overflow: auto;
 }
 aside.right {
     width: 0%;
@@ -115,10 +116,14 @@ form {
 }
 
 .tableTop {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color);
-    margin-top: 1vh;
+    height: fit-content;
+    /* margin: 3vh 0; */
+    /* padding: 1.5rem 0; */
     p, h2 {
-        margin: 2vh 5vw 1.5vh 5vw;
+        margin: 2.5vh 5vw 2.5vh 5vw;
     }
 }
 
@@ -131,7 +136,7 @@ form {
         margin-bottom: 0.1rem;
     }
     input {
-    width: max(130px, 20vw);
+    width: clamp(130px, 25vw, 225px);
     }
 }
 .row {
@@ -143,17 +148,16 @@ form {
 .inputGroup {
     display: flex;
     flex-direction: column;
-    
 }
 
 .tableFooter {
-    margin-top: 2vh;
+    height: calc(2rem + 12vh);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    row-gap: 1vh;
     background-color:var(--background-color);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 
 
