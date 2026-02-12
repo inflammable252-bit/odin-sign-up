@@ -86,6 +86,7 @@ main {
     }
 }
 .content {
+    --background-color: #096acc1c;
     display: flex;
     flex-direction: column;
     padding: 3vh 0 3vh;
@@ -111,8 +112,6 @@ aside.right {
 form {
     display: flex;
     flex-direction: column;
-
-    --background-color: #096acc1c;
 }
 
 .tableTop {
@@ -125,35 +124,26 @@ form {
 
 .tableInputWrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5%;
+    flex-direction: column;
+    padding: 10vw 10vh;
+    row-gap: 3vh;
     label {
         margin-bottom: 0.1rem;
     }
-
-    :first-Child.formColumn {
-        margin-left: 4vw;
-    }
-    :last-Child.formColumn {
-        margin-right: 4vw;
-    }
-    
-}
-.formColumn {
-    display: flex;
-    flex-direction: column;   
-
-    :first-Child {
-        margin-top: 2rem;
-    }
-    :last-Child {
-        margin-bottom: 2rem;
-    }
     input {
-    width: max(120px, 100%);
-    /* margin-bottom: 4vh; */
+    width: max(130px, 20vw);
     }
+}
+.row {
+    display: flex;
+    column-gap: 4.5vw;
+    justify-content: center;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .tableFooter {
