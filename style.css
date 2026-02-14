@@ -157,6 +157,7 @@ form {
 }
 
 .tableFooter {
+    color: rgba(53, 31, 2, 0.918);
     height: calc(2rem + 12vh);
     display: flex;
     flex-direction: column;
@@ -166,7 +167,7 @@ form {
     padding-top: var(--standard-section-spacing);
 }
 
-.tableFooter>input {
+.tableFooter>button {
     background-color: rgb(var(--green));
     color: white;
     border-style: none;
@@ -175,4 +176,34 @@ form {
     font-size: calc(1.2rem + 0.1vw);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:link, a:hover {
+    color: rgb(29, 108, 226);
+}
+
+a:visited {
+    color: rgb(97, 33, 216);
+}
+
+a:active {
+    color: rgb(29, 137, 226);
+}
+
+input:valid {
+    color: black;
+}
+/* input:invalid {
+    color: red;
+} */
+input:user-invalid {
+    border: 2.5px solid rgba(179, 64, 29, 0.534);
+}
+
+input:focus {
+    border: 3px solid pink;
+    box-shadow: 0 8px 6px -6px #80808078;
+}
 
