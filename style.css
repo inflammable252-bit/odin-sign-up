@@ -1,5 +1,6 @@
 :root {
     --green: 0, 148, 37;
+    --standard-section-spacing: calc(1rem + 0.7vh);
 }
 @font-face {
     font-family: 'Nunito';
@@ -104,7 +105,7 @@ aside.right {
 
 @media (min-width: 768px) {
     aside.right {
-        width: calc(10vw - 3rem);
+        width: calc(10vw - 4rem);
     }
 }
 form {
@@ -116,14 +117,17 @@ form {
     display: flex;
     flex-direction: column;
     height: auto;
-    padding: 1vh 8vw 3vh;
-    p {
-        font-size: 1.3rem;
-        line-height: calc(1rem + 3.5vh);
-    }
+    padding: 1vh 12vw var(--standard-section-spacing);
     p, h2 {
-        margin-top: 1.5vh;
+        margin-bottom: 1vh;
         color: rgb(92, 54, 5);
+    }
+    p {
+        font-size: calc(1rem + 0.2vw);
+        line-height: calc(1rem + 0.8vw);
+    }
+    h2 {
+        font-size: calc(1.4rem + 0.2vw);
     }
 }
 
@@ -133,17 +137,17 @@ form {
     display: flex;
     flex-direction: column;
     padding: 5vh 5vw 8vh;
-    row-gap: 3vh;
+    row-gap: 3.2vh;
     label {
         margin-bottom: 0.1rem;
     }
     input {
-    width: clamp(130px, 25vw, 225px);
+    width: clamp(130px, 25vw, 240px);
     }
 }
 .row {
     display: flex;
-    column-gap: 4.5vw;
+    column-gap: 4vw;
     justify-content: center;
 }
 
@@ -156,18 +160,19 @@ form {
     height: calc(2rem + 12vh);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    row-gap: 1vh;
+    row-gap: calc(0.5rem + 0.1vh);
+    padding-top: var(--standard-section-spacing);
 }
 
 .tableFooter>input {
     background-color: rgb(var(--green));
     color: white;
     border-style: none;
-    border-radius: 2vw;
-    padding: 8px 24px;
-    font-size: 1.1rem;
+    border-radius: 25px;
+    padding: 7px 22px;
+    font-size: calc(1.2rem + 0.1vw);
 }
 
 

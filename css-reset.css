@@ -45,3 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+
+/* https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/ */
+/* prevent browser zoom for sub-16px fonts */
+input {
+  font-size: max(16px, 1rem);
+}
