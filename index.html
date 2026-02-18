@@ -22,20 +22,21 @@
                     <h2>You <em>know</em> you want to.</h2>
                 </div>
                 <div class="tableInputWrapper">
+                    <p id="midActionText">Let's do this!</p>
                         <div class="row">
                             <div class="inputGroup">
                                 <label for="first-name">First Name</label>
-                                <input type="text" name="first-name" id="first-name">
+                                <input type="text" name="first-name" id="first-name" required />
                             </div>
                             <div class="inputGroup">
                                     <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name" required>
+                                    <input type="text" id="last-name" required />
                             </div>
                         </div>
                         <div class="row">
                             <div class="inputGroup">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" required />
                             </div>
                             <div class="inputGroup">
                                 <label for="phone">Phone Number</label>
@@ -45,11 +46,14 @@
                         <div class="row">
                             <div class="inputGroup">
                                 <label for="password">Password</label>
-                                <input type="password" name="password" id="password">
+                                <input type="password" name="password" id="password" placeholder="Password1" minlength="8" pattern =".*[A-Z]+.*[\d]+.*" required />
+                                <div class="pwReqInfo">
+                                    <p>Password must contain at least 8 characters, including at least one number, one uppercase and one lowercase letter.</p>
+                                </div>
                             </div>
                             <div class="inputGroup">
                                 <label for="passwordConfirm">Confirm Password</label>
-                                <input type="password" name="passwordConfirm" id="passwordConfirm" required>
+                                <input type="password" name="passwordConfirm" id="passwordConfirm" required />
                             </div>
                         </div>
                 </div>

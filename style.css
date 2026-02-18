@@ -124,10 +124,10 @@ form {
     }
     p {
         font-size: calc(1rem + 0.2vw);
-        line-height: calc(1rem + 0.8vw);
+        line-height: calc(1.1rem + 0.8vw);
     }
     h2 {
-        font-size: calc(1.4rem + 0.2vw);
+        font-size: calc(1.3rem + 0.2vw);
     }
 }
 
@@ -145,6 +145,14 @@ form {
     width: clamp(130px, 25vw, 240px);
     }
 }
+
+#midActionText {
+    display: inline;
+    position: relative;
+    margin-bottom: -1.4vh;
+    font-size: calc(1.15rem + 0.2vw);
+}
+
 .row {
     display: flex;
     column-gap: 4vw;
@@ -178,6 +186,34 @@ form {
 
 a {
     text-decoration: none;
+}
+
+.pwReqInfo {
+    visibility: hidden;
+}
+
+.pwReqInfo > p {
+    position:absolute;
+    top: 1.1vh;
+    width: clamp(130px, 25vw, 240px);
+    font-size: calc(0.65rem + 0.2vw);
+}
+
+input#password:focus + div>p, input#password:user-invalid + div>p {
+    position: relative;
+    visibility: visible;
+}
+
+input#password:focus:valid + div>p {
+    color: green;
+}
+
+form {
+    --error-color: rgba(173, 19, 58, 0.918);
+}
+
+input#password:user-invalid + div>p {
+    color: var(--error-color);
 }
 
 a:link, a:hover {
