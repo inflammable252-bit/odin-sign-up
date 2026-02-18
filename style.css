@@ -205,7 +205,7 @@ input#password:focus + div>p, input#password:user-invalid + div>p {
 }
 
 input#password:focus:valid + div>p {
-    color: green;
+    visibility: hidden;
 }
 
 form {
