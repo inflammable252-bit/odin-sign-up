@@ -3,20 +3,21 @@
     --standard-section-spacing: calc(1rem + 0.7vh);
     --input-base-color: #2b74bc;
 }
+
 @font-face {
-    font-family: 'Nunito';
-    src: url('fonts/Nunito-ExtraLight.woff2') format('woff2'),
-        url('fonts/Nunito-ExtraLight.woff') format('woff');
-    font-weight: 200;
+    font-family: 'Numans';
+    src: url('./fonts/Numans-Regular.woff2') format('woff2'),
+        url('./fonts/Numans-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Pridi';
-    src: url('fonts/Pridi-SemiBold.woff2') format('woff2'),
-        url('fonts/Pridi-SemiBold.woff') format('woff');
-    font-weight: 600;
+    font-family: 'Aldrich';
+    src: url('./fonts/Aldrich-Regular.woff2') format('woff2'),
+        url('./fonts/Aldrich-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -29,7 +30,7 @@ body {
     background-color: #096acc;
     background-position: center;
     justify-content: space-between;
-    font-family: "Nunito";
+    font-family:"Numans", Arial, Helvetica, sans-serif;
     font-weight: 800;
 }
 .logo {
@@ -40,7 +41,7 @@ body {
     background-color: rgba(var(--green) / 0.8);
     font-size: clamp(calc(1.5rem - 1vw), 3vw, 45px);
     align-items: center;
-    font-family: "Pridi";
+    font-family: "Aldrich";
     letter-spacing: 2px;
 }
 .logo>img {
@@ -76,7 +77,7 @@ main {
     justify-content: center;
     width: 100%;
     height: 70vh;
-    margin-top: 6%;
+    margin-top: 1vh;
     border-radius: 32px;
     background: #9DE8F5;
     background: linear-gradient(170deg, rgba(157, 232, 245, 0.68) 15%, rgba(255, 255, 255, 0.08) 28%, rgba(223, 247, 252, 0.29) 50%, rgba(157, 232, 245, 0.6) 61%, rgba(9, 106, 204, 0.96) 87%, rgba(9, 106, 204, 0.3) 100%);
@@ -94,7 +95,7 @@ main {
     padding: 4vh 0 3vh;
     height: 98%;
     width: 96%;
-    background-color: hsl(53, 96%, 96%);
+    background-color: #fff;
     border-radius: 32px;
     margin: 2.5vh 1vw;
     overflow: auto;
@@ -118,14 +119,19 @@ form {
     display: flex;
     flex-direction: column;
     height: auto;
-    padding: 1vh 12vw var(--standard-section-spacing);
+    padding: 1vh max(10vw,2rem) var(--standard-section-spacing);
+    span {
+        border-radius: 12px;
+        background-color: #cbbd9393;
+        padding: 3vh 4vw;
+    }
     p, h2 {
         margin-bottom: 1vh;
-        color: rgb(92, 54, 5);
+        color: #443400;
     }
     p {
-        font-size: calc(1rem + 0.2vw);
-        line-height: calc(1.1rem + 0.8vw);
+        font-size: calc(1rem + 0.1vw);
+        line-height: calc(1.2rem + 0.8vw);
     }
     h2 {
         font-size: calc(1.3rem + 0.2vw);
@@ -156,13 +162,6 @@ form {
     border: 2px solid var(--input-base-color);
     border-radius: 6px;
     }
-}
-
-#midActionText {
-    display: inline;
-    position: relative;
-    margin-bottom: -1.4vh;
-    font-size: calc(1.15rem + 0.2vw);
 }
 
 .row {
