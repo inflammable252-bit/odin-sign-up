@@ -40,13 +40,13 @@
                             </div>
                             <div class="inputGroup">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" name="phone" id="phone">
+                                <input type="tel" name="phone" id="phone" pattern="\+?\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{4,6}" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="inputGroup">
                                 <label for="password">Password</label>
-                                <input type="password" name="password" id="password" placeholder="Password1" minlength="8" pattern ="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" required />
+                                <input type="password" name="password" id="password" minlength="8" pattern ="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}" required />
                                 <div class="pwReqInfo">
                                     <p>Password must contain at least 8 characters, including at least one number, one uppercase and one lowercase letter.</p>
                                 </div>
