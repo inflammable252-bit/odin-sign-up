@@ -36,17 +36,22 @@ body {
 .logo {
     color: white;
     width: 100vw;
-    padding: 10px calc(1px + 5vw) 10px calc(1px + 1vw);
+    padding: 10px calc(1px + 5vw) 10px calc(1px + 3vw);
     display: flex;
     background-color: rgba(var(--green) / 0.8);
     font-size: clamp(calc(1.5rem - 1vw), 3vw, 45px);
     align-items: center;
     font-family: "Aldrich";
     letter-spacing: 2px;
+    div {
+        display: flex;
+        align-items: center;
+    }
 }
-.logo>img {
+.logo > div > img {
     width: clamp(40px, 4.7vw, 100px);
-    margin-right: 10px;
+    margin: 0 1vw 5px 0;
+    max-width: 100%;
 }
 @media (min-width: 768px) {
     body {
@@ -63,9 +68,17 @@ body {
     .logo {
         width: 100%;
         background-color: rgb(var(--green) / 0.7);
-    }
-    .logo, .logo>img {
         margin: 0 auto;
+        padding-left: 1.7vw;
+        justify-content: center;
+
+    }
+    .logo > div > h1 {
+        padding-left: 0.5vw;
+    }
+    .logo > div > img {
+        margin: 0 0 6px 0;
+        height: 100%;
     }
 }
 main {
@@ -147,17 +160,20 @@ form {
     padding: 5vh 5vw 8vh;
     row-gap: 3.2vh;
     label {
-        position: relative;
-        right: 5px;
         color: white;
+        font-size: calc(0.8rem + 0.1vw);
+        @media (min-width: 768px) {
+        position: relative;
+        right: 10px;
+        }
         span {
             background-color: var(--input-base-color);
-            padding: 4px;
             border-radius: 8px;
+            padding: 4px;
         }
     }
     input {
-    width: clamp(130px, 25vw, 240px);
+    width: clamp(130px, 30vw, 240px);
     border: 2px solid var(--input-base-color);
     border-radius: 6px;
     }
