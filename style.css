@@ -1,6 +1,6 @@
 :root {
     --green: 0 148 37;
-    --standard-section-spacing: calc(1rem + 0.7vh);
+    --standard-section-spacing: calc(1rem + 1vh);
     --input-base-color: #2b74bc;
 }
 
@@ -122,7 +122,7 @@ form {
     padding: 1vh max(10vw,2rem) var(--standard-section-spacing);
     span {
         border-radius: 12px;
-        background-color: #cbbd9393;
+        background-color: rgba(255, 217, 114, 0.397);
         padding: 3vh 4vw;
     }
     p, h2 {
@@ -149,7 +149,6 @@ form {
     label {
         position: relative;
         right: 5px;
-        margin-bottom: 0.1rem;
         color: white;
         span {
             background-color: var(--input-base-color);
